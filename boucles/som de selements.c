@@ -16,7 +16,7 @@ int main () {
 	 	scanf ("%d",&N);
 }	while (N<=0); 
 
-    som=0;
+    F=0;
     printf (" les nombres paire sont  : \n");
     
 	for (i=1;i<=N;i++){
