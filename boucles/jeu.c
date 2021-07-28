@@ -17,8 +17,8 @@ int main () {
 	bool bol;
 // Initialisation du compteur pour avoir un nombre aléatoire différent pour chaque exécutation 
  	ltime =time (NULL);
-	stime = (unsigned) ltime /2 ;
-	srand(stime);
+	
+	srand(ltime);
 //générer un  aléatoire entre 1 et 1000.
 	random = rand () % 1000;
 	
