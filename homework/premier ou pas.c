@@ -13,21 +13,21 @@ int main () {
 	
 	
 	if (nombre ==1)	
-	printf ("le nombre  n'est pas premier");
-		else
-	i=2; trouve =false;
+		printf ("le nombre  n'est pas premier");
+	else{
 		
-	while (i<=nombre/2 && trouve== false) {
-	
-	if (nombre % i == 0) {
-	printf ("le nombre n'est pas premier");
-  	trouve= true;	}
-    i++;
-   } 
-	
-	if ( trouve==false)
-	printf ("le nombre est  premier");
-	
+		i=2; 	trouve =false;
+		
+		while (i<=nombre/2 && trouve== false) {	
+	 		if (nombre % i == 0) {
+				printf ("le nombre n'est pas premier");
+  				trouve= true;	}
+    		i++;
+   		} 
+
+		if ( trouve==false)
+			printf ("le nombre est  premier");
+	}
 	return 0;
 }
 
