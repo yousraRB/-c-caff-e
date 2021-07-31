@@ -22,7 +22,7 @@ int  main () {
 		srand(ltime);
 		
 	for (i=0;i<n;i++) {
-		tab [i]= rand () % 100;
+		tab [i]= rand () % 1000;
 	}
 		j=0; k=0;
 	for (i=0;i<n;i++){
