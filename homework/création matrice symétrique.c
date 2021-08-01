@@ -20,7 +20,7 @@ int main () {
 	j=j-1;
 	}
 
-	 printf("voila votre matrice triangulaire : \n");
+	printf("voila votre matrice triangulaire : \n");
 		 
 	for (i=0;i<n;i++){
 		for (j=0;j<n;j++){
@@ -35,9 +35,9 @@ int main () {
 		}
 	
 	}
-		printf(" voila la forme symétrique de votre matrice : \n");
+	printf(" voila la forme symétrique de votre matrice : \n");
 
-for (i=0;i<n;i++){
+	for (i=0;i<n;i++){
 		for (j=0;j<n;j++){
 			printf ("%d",tab [i][j]);
 			printf("  ");
