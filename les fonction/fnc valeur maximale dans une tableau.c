@@ -14,7 +14,7 @@ int main(){
 	do{
 	printf (" donnez n le nombre des cases de tableau  (n>0): \n");
 	scanf( "%d",&n);
-    }while ( n<=0);
+    }while ( n<=0 || n>100 );
     
     for (i=0;i<n;i++){
     	printf ( " donnez la valeur de la case numéro %d : ",i);

@@ -36,10 +36,14 @@ void calafich ( int bi, int bs){
 		printf ( "0! = 1 \n");bi++;}
 	
 	while ( bi<=bs){
-		fact=1;
+		fact=1; printf ( " %d ! = 1* ",bi );
 		for (i=2;i<=bi;i++){
 			fact=fact*i;
-		}printf ( " %d ! = %d \n",bi ,fact);
+			printf ("%d ",i);
+			if ( i!=bi)
+			printf ("*");
+		
+		}printf ( "= %d \n" ,fact);
 		bi=bi+1;
 }
 

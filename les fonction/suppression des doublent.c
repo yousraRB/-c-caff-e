@@ -14,7 +14,7 @@ int main(){
 	do{
 	printf (" donnez n le nombre des cases de tableau  (n>0): \n");
 	scanf( "%d",&n);
-    }while ( n<=0);
+    }while ( n<=0 || n>100);
     
     for (i=0;i<n;i++){
     	printf ( " donnez la valeur de la case numéro %d : ",i);
@@ -36,13 +36,15 @@ void supprime  (int tab[100],int n){
 	int i,j,k;
 	
 	for ( i=0;i<n;i++){
-		for (j=i+1;j<n;j++){
+		j=i+1;
+		while(j<n){
 			if ( tab[i]==tab[j]){
 				for (k=j;k<n;k++){
 					tab[k]=tab[k+1];
 				}
 				n=n-1;
-			j=j-1;
+			}else {
+				j++;
 			}
 			
 		}	
