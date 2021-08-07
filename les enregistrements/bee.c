@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <math.h>
+#include <string.h>
+#include<ctype.h>
 struct ruche {
 	int num;
 	int age;
@@ -10,9 +12,10 @@ typedef struct ruche ruche ;
 
 int main(){
 	ruche tab[200]	;
-	int i ,n ;
+	int i,cpt ,n ;
+	float qant;
 	ruche max;
-	
+	char tellienne[20];
 	
 	do{
 	printf ( " donnez n la taille de tableau : \n");
@@ -30,15 +33,34 @@ int main(){
 		printf ( " donnez le qant de ruch de la case %d : \n" , i);
 		scanf("%f" ,&tab [i].qant);
 	}
-	 max = tab [0];
-	
 
-	 for (i=1; i<n; i++){
+
+
+
+max = tab [0];
+
+
+	for (i=1; i<n; i++){
 	 	if ( tab[i].qant>max.qant)
 	 	max=tab [i];
 	 	
 	 }
-	 printf ( "the numbre of the best bee quantety is : %d", max.num );
+
+	printf ( "the numbre of the best bee quantety is : %d \n", max.num );
+
+	qant=0;cpt=0;
+
+	for (i=0;i<n;i++){
+	 	if (strcmp (tab[i].type,"tellienne")==0){
+	 		qant=qant + tab [i].qant;
+	 		cpt =cpt+1;
+		 }
+		 
+	 }
+
+	printf ( " la moyenne d’une ruche de l’espece tellienne est : %.2f ", qant/cpt);
+
+
 	 return 0;
 
 }
