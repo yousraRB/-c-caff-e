@@ -22,7 +22,8 @@ int main (){
 	printf ("|-4 pour modifie le montant restant de condidat \n");
 	printf ("|-5 pour mettre à jours le status d’ un examen\n ");
 	printf ("|-6 pour afficher les condidats \n");
-	printf ("|-7 exit\n");
+	printf ("|-7 pour mise a jour les nombres de seances \n");
+	printf ("|-8 exit\n");
 	printf ("\n veuillez entrer votre choix : \n");
 	scanf  ( "%d",&choix);
 
@@ -72,6 +73,16 @@ int main (){
 			printf ("\n*la liste des condidats*\n");
 			affichage ();
 			break;
+		case 7:
+			printf ("*mettre à jours les nombres de seances*\n");
+			printf ("donnez le nom de condidat que vous voulez modifie:\n");
+			scanf (" %s",nom);
+			printf ("donnez le numero dossier de condidat que vous voulez modifie : \n");
+			scanf (" %s",code);
+			printf ("saisissez le nouveau nombre de seances de ce condidat : \n");
+			scanf ("%d",&choixe);
+			nbrseance ( nom,code,choixe);
+			
 	default :exit (1);
 }
 }

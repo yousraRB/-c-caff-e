@@ -204,3 +204,30 @@ void affichage (){
 		printf ("\n");
 	}
 }
+void nbrseance (char nom[50],char code[50],nbrse){
+	FILE *f;
+	FILE *g;
+	tcondidat c;
+	
+	f=fopen("condidat.txt","r");
+	g=fopen("condidatE.txt","w");
+	while (fread(&c,sizeof(tcondidat),1,f)){
+		if (strcmp(c.nom,nom)==0 && strcmp(c.code,code)==0){
+			c.nbrs=nbrse;
+			fwrite(&c,sizeof(tcondidat),1,g);}
+		else
+			fwrite(&c,sizeof(tcondidat),1,g);
+		}
+	}
+	fclose (f);
+	fclose (g);
+	f=fopen("condidat.txt","w");
+	g=fopen("condidatE.txt","r");
+
+	while (fread(&c,sizeof(tcondidat),1,g)){
+		fwrite(&c,sizeof(tcondidat),1,f);}
+
+	fclose (f);
+	fclose (g);
+}
+
