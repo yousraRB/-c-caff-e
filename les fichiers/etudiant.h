@@ -22,10 +22,10 @@ void ajouterEtudiant ( ){
 void afficherEtudiants(){
 	tetudiant e ;
 	FILE *f;
-	
+	bool trouve=false;
 	f=fopen("liste_etudiants.txt","r");
 	
-	while (fread ( &e,sizeof ( tetudiant),1,f )){
+	while (fread ( &e,sizeof ( tetudiant),1,f )&&trouve==false){
 		printf ( " %s %s %s %.2f %s %s \n ",e.nom,e.prenm ,e.matricule,e.moy, e.sec.nom,e.sec.filier);
 	}
 		
