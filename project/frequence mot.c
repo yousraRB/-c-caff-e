@@ -110,7 +110,7 @@ void modifier (int nbr,mo tab[100], int n,char mot[30]){
 
 	
 	f=fopen("analyse.txt","r");
-	g=fopen ("analyse.txt","w");
+	g=fopen ("analysemedia.txt","w");
 	while (fread(&tab[i],sizeof(mo),1,f)){
 		if (strcmp(mot,tab[i].mot)==0){
 			tab[i].nbr=nbr;
@@ -124,7 +124,7 @@ void modifier (int nbr,mo tab[100], int n,char mot[30]){
 	fclose(f);
 	fclose(g);
 	f=fopen("analyse.txt","w");
-	g=fopen ("analyse.txt","r");
+	g=fopen ("analysemedia.txt","r");
 	i=0;
 	while (fread(&tab[i],sizeof(mo),1,g)){
 		fwrite(&tab[i],sizeof(mo),1,f);		
