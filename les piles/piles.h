@@ -1,13 +1,13 @@
 
 typedef struct PILE PILE;
 struct PILE {
-	char val;
+	int  val;
 	PILE *svt;
 };
 void init (PILE **tete){
 	*tete=NULL;
 }
-void enpiler (PILE **tete,char x){
+void enpiler (PILE **tete,int x){
 	PILE *p;
 	
 	p=(PILE*)malloc(sizeof(PILE));
@@ -15,7 +15,7 @@ void enpiler (PILE **tete,char x){
 	p->svt=*tete;
 	*tete=p;
 }
-void depiler (PILE **tete,char *x){
+void depiler (PILE **tete,int *x){
 	PILE *p;
 	
 	*x=(*tete)->val;
@@ -23,7 +23,7 @@ void depiler (PILE **tete,char *x){
 	*tete=(*tete)->svt;
 	free(p);	
 }
-char sonnet (PILE *tete){
+int sonnet (PILE *tete){
 	return tete->val;
 }
 bool vide(PILE *tete){
