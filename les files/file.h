@@ -39,6 +39,9 @@ void defiler (FILEs *tete,int *val){
 	}
 	free(p);
 }
+int sommet (FILEs tete){
+	return (tete.head)->val;
+}
 bool vide(FILEs tete){
 	return tete.head==NULL;
 }
